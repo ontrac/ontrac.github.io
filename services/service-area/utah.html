@@ -16,8 +16,8 @@
 
 
   <link rel="stylesheet" href="../../assets/css/app.css">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css"
-    integrity="sha384-yJpxAFV0Ip/w63YkZfDWDTU6re/Oc3ZiVqMa97pi8uPt92y0wzeK3UFM2yQRhEom" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
 
 
@@ -56,82 +56,54 @@
   <meta property="article:author" content="https://www.facebook.com/ontracshipping">
 
   <link rel="preconnect" href="https://scripts.sirv.com" crossorigin>
-  <link rel="preconnect" href="https://ontrac.sirv.com" crossorigin>
-  <link rel="preconnect" href="https://ontrac.sirv.com" crossorigin>
   <link rel="dns-prefetch" href="https://scripts.sirv.com">
-  <link rel="dns-prefetch" href="//ontrac.sirv.com">
-  <link rel="dns-prefetch" href="//ontrac.sirv.com">
-
-  <script src="https://scripts.sirv.com/sirv.js"></script>
-
-  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <link src="https://scripts.sirv.com/sirv.js">
+  <link rel="dns-prefetch" href="https://ontrac.sirv.com">
 
   <link rel="preload" href="https://ontrac.sirv.com/www/jquery.min.js" as="script">
-  <link rel="preload" href="https://cdn.datatables.net/v/zf/jszip-2.5.0/dt-1.10.23/af-2.3.5/b-1.6.5/b-colvis-1.6.5/b-flash-1.6.5/b-html5-1.6.5/b-print-1.6.5/cr-1.5.3/fc-3.3.2/fh-3.1.8/kt-2.6.1/r-2.2.7/rg-1.1.2/rr-1.2.7/sc-2.0.3/sb-1.0.1/sp-1.2.2/sl-1.3.1/datatables.min.js" as="script">
-  <link rel="preload" href="https://ontrac.sirv.com/www/mustache.min.js" as="script">
-  <link rel="preload" href="https://ontrac.sirv.com/www/picker.min.js" as="script">
-  <link rel="preload" href="https://ontrac.sirv.com/www/picker.date.min.js" as="script">
-  <link rel="preload" href="https://ontrac.sirv.com/www/picker.time.min.js" as="script">
-  <link rel="preload" href="https://ontrac.sirv.com/www/aos.min.js" as="script">
-  <link rel="preload" href="https://ontrac.sirv.com/www/parsley.min.js" as="script">
 
-  <link rel="preload" href="https://ontrac.sirv.com/www/slick.min.js" as="script">
+
+
+
+
+
 
   <link rel="preload" href="https://ontrac.sirv.com/www/pdfmake.min.js"  as="script">
-
+  <link rel="preload" href="https://cdn.datatables.net/v/zf/jszip-2.5.0/dt-1.10.23/af-2.3.5/b-1.6.5/b-colvis-1.6.5/b-flash-1.6.5/b-html5-1.6.5/b-print-1.6.5/cr-1.5.3/fc-3.3.2/fh-3.1.8/kt-2.6.1/r-2.2.7/rg-1.1.2/rr-1.2.7/sc-2.0.3/sb-1.0.1/sp-1.2.2/sl-1.3.1/datatables.min.js" as="script">
+  <link rel="preload" href="https://ontrac.sirv.com/www/settingsDataTables.js" as="script">
   <link rel="preload" href="https://ontrac.sirv.com/www/moment.min.js"  as="script">
-
   <link rel="preload" href="https://ontrac.sirv.com/www/paginationjs.min.js"  as="script">
 
-  <link rel="preload" href="https://ontrac.sirv.com/www/jquery.tmpl.min.js"  as="script">
-
-  <link rel="preload" href="https://ontrac.sirv.com/www/zxcvbn.min.js"  as="script">
-
   <link rel="preload" href="../../assets/js/app.js" as="script">
-
   <link rel="preload" href="../../assets/css/app.css" as="style">
-
-  <!-- <scrip>(function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({
-          'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-        }); var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-PVH9RXH');
-    </scrip> -->
 
 </head>
 
 <body>
-  <!-- <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVH9RXH" height="0" width="0"
-        style="display:none;visibility:hidden">
-      </iframe>
-    </noscript> -->
-
-  <div id="pop-up" class="callout secondary-background service-alert">
-      <div class="grid-x">
-          <div class="cell">
-              <div class="grid-container">
-                  <div class="grid-x align-center">
-                      <div class="cell small-12 medium-11 large-11 xlarge-12">
-                          <a id="hide-link" href="/alerts">
-                              <p class="service-alert-text"> <i
-                                      class="fas fa-exclamation-triangle double-flash fa-lg"></i> <strong>Service
-                                  Alert:</strong>  Adverse weather will delay
-                                  some shipments by an additional transit day. See our
-                                  <strong>Service Alerts</strong> for more information.</p>
-                          </a>
-                          <button id="hide" class="close-button service-alert-button" aria-label="Dismiss alert"
-                              type="button">
-                              <span aria-hidden="true">&times;</span>
-                          </button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+  <div id="pop-up">
+    <!-- <div class="callout secondary-background service-alert">
+        <div class="grid-x">
+            <div class="cell">
+                <div class="grid-container">
+                    <div class="grid-x align-center">
+                        <div class="cell small-12 medium-11 large-11 xlarge-12">
+                            <a id="hide-link" href="/alerts">
+                                <p class="service-alert-text"> <i
+                                        class="fas fa-exclamation-triangle double-flash fa-lg"></i> <strong>Service
+                                    Alert:</strong>  Adverse weather will delay
+                                    some shipments by an additional transit day. See our
+                                    <strong>Service Alerts</strong> for more information.</p>
+                            </a>
+                            <button id="hide" class="close-button service-alert-button" aria-label="Dismiss alert"
+                                type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
   </div>
   <div class="off-canvas position-right" id="offcanvas" data-off-canvas data-options="force-top: true">
   
@@ -4595,19 +4567,16 @@
                                             </li>
                                             <li class="show-for-medium">
                                                 <a href="javascript:" id="return-to-top-one" title="Return to top">
-                                                    <i class="fas fa-arrow-to-top"></i>
+                                                    <i class="fad fa-caret-circle-up"></i>
                                                 </a>
                                             </li>
                                         </ul>
                                     </div>
         
                                     <div class="cell small-12 show-for-small-only small-order-4 text-center large-text-right">
-                                        <span class="fa-layers fa-fw fa-3x">
-                                            <i class="fas fa-circle"></i>
-                                            <a href="javascript:" id="return-to-top-two" title="title">
-                                                <i class="fas fa-arrow-to-top fa-inverse" data-fa-transform="shrink-8"></i>
+                                            <a href="javascript:" id="return-to-top-two" title="Back to top">
+                                                <i class="fad fa-caret-circle-up"></i>
                                             </a>
-                                        </span>
                                     </div>
         
                                 </div>
@@ -4617,28 +4586,29 @@
                 </div>
             </div>
         
-        
         </footer>      </div>
     </div>
   </div>
   </div>
   </div>
+
   <script src="https://ontrac.sirv.com/www/jquery.min.js"></script>
+
+
+
+
   <script
   src="https://cdn.datatables.net/v/zf/jszip-2.5.0/dt-1.10.23/af-2.3.5/b-1.6.5/b-colvis-1.6.5/b-flash-1.6.5/b-html5-1.6.5/b-print-1.6.5/cr-1.5.3/fc-3.3.2/fh-3.1.8/kt-2.6.1/r-2.2.7/rg-1.1.2/rr-1.2.7/sc-2.0.3/sb-1.0.1/sp-1.2.2/sl-1.3.1/datatables.min.js"></script>
   <script src="https://ontrac.sirv.com/www/paginationjs.min.js"></script>
-  <script src="https://ontrac.sirv.com/www/moment.min.js"></script>
   <script src="https://ontrac.sirv.com/www/pdfmake.min.js"></script>
-  <script src="https://ontrac.sirv.com/www/mustache.min.js"></script>
-  <script src="https://ontrac.sirv.com/www/slick.min.js"></script>
-  <script src="https://ontrac.sirv.com/www/picker.min.js"></script>
-  <script src="https://ontrac.sirv.com/www/picker.date.min.js"></script>
-  <script src="https://ontrac.sirv.com/www/picker.time.min.js"></script>
-  <script src="https://ontrac.sirv.com/www/aos.min.js"></script>
-  <script src="https://ontrac.sirv.com/www/parsley.min.js"></script>
-  <script src="https://ontrac.sirv.com/www/jquery.tmpl.min.js"></script>
-  <script src="https://ontrac.sirv.com/www/zxcvbn.min.js"></script>
+  <script src="https://ontrac.sirv.com/www/moment.min.js"></script>
+  <script src="https://ontrac.sirv.com/www/settingsDataTables.js"></script>
+
+
+
+
   <script src="../../assets/js/app.js"></script>
+
 </body>
 
 </html>
