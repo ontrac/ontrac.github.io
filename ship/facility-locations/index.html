@@ -62,7 +62,7 @@
   <link src="https://scripts.sirv.com/sirvjs/v3/sirv.js">
   <link rel="dns-prefetch" href="https://ontrac.sirv.com">
 
-  <link rel="preload" href="https://ontrac.sirv.com/www/jquery.min.js" as="script">
+  <link rel="preload" href="https://ontrac.sirv.com/scripts/jquery.min.js" as="script">
 
 
 
@@ -77,16 +77,7 @@
 </head>
 
 <body>
-  <span class="text-center">
-      <span class="show-for-small">small /</span>
-      <span class="show-for-medium"> medium /</span>
-      <span class="show-for-large"> large /</span>
-      <span class="show-for-xlarge"> xlarge /</span>
-      <span class="show-for-x2large"> x2large /</span>
-      <span class="show-for-x3large"> x3large /</span>
-      <span class="show-for-x4large"> x4large /</span>
-      <span class="show-for-x5large"> x5large</span>
-  </span>  <div id="pop-up">
+  <div id="pop-up">
     <!-- <div class="callout secondary-background service-alert">
         <div class="grid-x">
             <div class="cell">
@@ -448,7 +439,7 @@
                                   <a href="/sales"
                                     title="Contact OnTrac Sales">
                                     <small>
-                                      Sales
+                                      Contact Sales
                                     </small>
                                   </a>
                                 </li>
@@ -958,23 +949,23 @@
                                         <li>
                                           <a href="/chat"
                                             title="Chat with OnTrac">
-                                            <i class="fas fa-comments fa-fw icons"></i>Chat
+                                            <i class="fas fa-comments fa-fw icons"></i> Chat
                                           </a>
                                         </li>
                                         <li>
-                                          <i class="fas fa-envelope fa-fw icons"></i>Email
+                                          <i class="fas fa-envelope fa-fw icons"></i> Email
                                           </a>
                                         </li>
                                         <li>
                                           <a href="tel:+18003345000" title="Call OnTrac Customer Care">
-                                            <i class="fas fa-phone fa-fw icons" data-fa-transform="flip-h"></i>800.334.5000
+                                            <i class="fas fa-phone fa-fw icons" data-fa-transform="flip-h"></i> 800.334.5000
                                           </a>
                                         </li>
                                         <li>
                                           <a href="/alerts"
                                             title="Service Alerts">
                                             <i
-                                              class="fas fa-exclamation-triangle fa-fw icons"></i>Service Alerts
+                                              class="fas fa-exclamation-triangle fa-fw icons"></i> Service Alerts
                                           </a>
                                         </li>
                                       </ul>
@@ -995,28 +986,28 @@
                                         <li>
                                           <a href="/support/faqs#change-an-address"
                                             title="How to request a change of delivery address.">
-                                            <i class="fal fa-question-circle icons"></i>Change
+                                            <i class="fal fa-question-circle icons"></i> Change
                                             a delivery address
                                           </a>
                                         </li>
                                         <li>
                                           <a href="/support/faqs#pickup-at-facility"
                                             title="How to hold a package at an OnTrac facility for pickup">
-                                            <i class="fal fa-question-circle icons"></i>Pickup
+                                            <i class="fal fa-question-circle icons"></i> Pickup
                                             a package at the facility
                                           </a>
                                         </li>
                                         <li>
                                           <a href="/support/faqs#schedule-a-pickup"
                                             title="How to arrange a pickup">
-                                            <i class="fal fa-question-circle icons"></i>Request
+                                            <i class="fal fa-question-circle icons"></i> Request
                                             a pickup
                                           </a>
                                         </li>
                                         <li>
                                           <a href="/support/faqs#send-delivery-instructions"
                                             title="How to send OnTrac delivery instructions">
-                                            <i class="fal fa-question-circle icons"></i>Send
+                                            <i class="fal fa-question-circle icons"></i> Send
                                             OnTrac delivery instructions
                                           </a>
                                         </li>
@@ -1086,7 +1077,7 @@
                                       title="Get Ready to Ship">Get Ready to Ship</a>
                                   </h4><ul class="no-bullet"><li>
                                       <a href="/sales" title="Contact OnTrac Sales">
-                                        
+                                        Contact OnTrac Sales
                                       </a>
                                     </li><li>
                                       <a href="/quote" title="Rates and Transit Times">
@@ -1466,6 +1457,155 @@
                                             <div class="grid-x">
                                                 <div class="cell">
                                                     
+                                                    
+                                                    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+                                                    <style type="text/css">
+                                                      /* Always set the map height explicitly to define the size of the div
+                                                           * element that contains the map. */
+                                                      #allFacMap {
+                                                        height: 30rem;
+                                                      }
+                                                    </style>
+                                                    
+                                                    <script>
+                                                      let map;
+                                                    
+                                                      function initMap() {
+                                                        map = new google.maps.Map(document.getElementById("allFacMap"), {
+                                                          center: new google.maps.LatLng(-33.91722, 151.23064),
+                                                          zoom: 16,
+                                                        });
+                                                        const iconBase =
+                                                          "https://ontrac.sirv.com/images/icons/";
+                                                        const icons = {
+                                                          facility: {
+                                                            icon: iconBase + "facility.png",
+                                                          },
+                                                          dropBox: {
+                                                            icon: iconBase + "dropbox.png",
+                                                          },
+                                                          corporate: {
+                                                            icon: iconBase + "corporate.png",
+                                                          },
+                                                          dropBox: {
+                                                            icon: iconBase + "other-facilities.png",
+                                                          },
+                                                        };
+                                                        const features = [
+                                                          {
+                                                            position: new google.maps.LatLng(-33.91721, 151.2263),
+                                                            type: "info",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(-33.91539, 151.2282),
+                                                            type: "info",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(-33.91747, 151.22912),
+                                                            type: "info",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(-33.9191, 151.22907),
+                                                            type: "info",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(-33.91725, 151.23011),
+                                                            type: "info",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(-33.91872, 151.23089),
+                                                            type: "info",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(-33.91784, 151.23094),
+                                                            type: "info",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(-33.91682, 151.23149),
+                                                            type: "info",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(-33.9179, 151.23463),
+                                                            type: "info",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(-33.91666, 151.23468),
+                                                            type: "info",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(-33.916988, 151.23364),
+                                                            type: "info",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(
+                                                              -33.91662347903106,
+                                                              151.22879464019775
+                                                            ),
+                                                            type: "parking",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(
+                                                              -33.916365282092855,
+                                                              151.22937399734496
+                                                            ),
+                                                            type: "parking",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(
+                                                              -33.91665018901448,
+                                                              151.2282474695587
+                                                            ),
+                                                            type: "parking",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(
+                                                              -33.919543720969806,
+                                                              151.23112279762267
+                                                            ),
+                                                            type: "parking",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(
+                                                              -33.91608037421864,
+                                                              151.23288232673644
+                                                            ),
+                                                            type: "parking",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(
+                                                              -33.91851096391805,
+                                                              151.2344058214569
+                                                            ),
+                                                            type: "parking",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(
+                                                              -33.91818154739766,
+                                                              151.2346203981781
+                                                            ),
+                                                            type: "parking",
+                                                          },
+                                                          {
+                                                            position: new google.maps.LatLng(
+                                                              -33.91727341958453,
+                                                              151.23348314155578
+                                                            ),
+                                                            type: "library",
+                                                          },
+                                                        ];
+                                                    
+                                                        // Create markers.
+                                                        for (let i = 0; i < features.length; i++) {
+                                                          const marker = new google.maps.Marker({
+                                                            position: features[i].position,
+                                                            icon: icons[features[i].type].icon,
+                                                            map: map,
+                                                          });
+                                                        }
+                                                      }
+                                                    </script>
+                                                    
+                                                    <div id="allFacMap"></div>
                                                     
                                                         <div class="cell article-states-all margin-top-2">
                                                             <div class="grid-x">
@@ -2543,7 +2683,7 @@
   </div>
   </div>
 
-  <script src="https://ontrac.sirv.com/www/jquery.min.js"></script>
+  <script src="https://ontrac.sirv.com/scripts/jquery.min.js"></script>
 
 
 
@@ -2554,6 +2694,9 @@
   <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
   <script src="../../assets/js/app.js"></script>
 
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm8V_oRjTWKmvLeaGWgTks0OxixMhIAQ4&callback=initMap&libraries=&v=weekly" async>
+</script>
 
 <script
   type="text/javascript">var EhAPI = EhAPI || {}; EhAPI.after_load = function () { EhAPI.set_account('1afebk2r4q20q9efmaa8ha78hj', 'ontrac'); EhAPI.execute('rules'); }; (function (d, s, f) { var sc = document.createElement(s); sc.type = 'text/javascript'; sc.async = true; sc.src = f; var m = document.getElementsByTagName(s)[0]; m.parentNode.insertBefore(sc, m); })(document, 'script', '//d2p078bqz5urf7.cloudfront.net/jsapi/ehform.js');</script>
